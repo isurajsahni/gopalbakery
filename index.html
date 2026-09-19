@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gopal Bakery and Sweets – Delicious Cakes &amp; Treats for Every Celebration</title>
+  <meta name="description" content="Freshly baked cakes, pastries, cookies and sweet treats made with love every day at Gopal Bakery and Sweets.">
+
+  <!-- Fonts used in the Figma file: Fredoka One (headings), Sniglet (body), Single Day (script accents) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka+One&amp;family=Single+Day&amp;family=Sniglet&amp;display=swap">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ============================== ANNOUNCEMENT BAR ============================== -->
+  <div class="announcement">
+    <p>🍰 Freshly Baked Goodness, Delivered to Your Doorstep</p>
+  </div>
+
+  <!-- ============================== HEADER ============================== -->
+  <header class="header">
+    <div class="container header__inner">
+      <a class="logo" href="#top">
+        <img src="assets/images/logo.png" alt="Gopal Bakery and Sweets – home" width="665" height="300">
+      </a>
+
+      <!-- Mobile menu: the hidden checkbox opens/closes the menu with CSS only -->
+      <input class="menu-toggle" type="checkbox" id="menu-toggle" aria-label="Toggle menu">
+      <label class="menu-button" for="menu-toggle" aria-hidden="true"><span></span></label>
+
+      <div class="header__menu">
+        <nav class="nav" aria-label="Main">
+          <a class="is-active" href="#top" aria-current="page">Home</a>
+          <a href="#our-story">About</a>
+          <a href="#cakes">Cakes</a>
+          <a href="shop.html">Bakery Items</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <div class="header__actions">
+          <a class="btn btn--outline" href="shop.html">Order now</a>
+          <a class="btn btn--solid" href="tel:+919988340395">
+            <img src="assets/icons/phone.svg" alt="" width="25" height="25">
+            <span>99883 40395</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============================== HERO ============================== -->
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="eyebrow">
+            <span>Freshly Baked With Love</span>
+            <img src="assets/icons/eyebrow-line.svg" alt="" width="129" height="1">
+          </p>
+          <h1 class="hero__title">Delicious Cakes &amp; Treats for Every Celebration</h1>
+          <p class="hero__text">Freshly baked cakes, pastries, and sweet treats made with love every day.</p>
+          <a class="hero__shop" href="shop.html">Shop Now</a>
+
+          <ul class="hero__thumbs">
+            <li><img src="assets/images/hero-thumb-cake.png" alt="Chocolate drip cake with cream frosting" width="339" height="316"></li>
+            <li><img src="assets/images/hero-thumb-cookies.png" alt="Chocolate chip cookies on a wooden board" width="339" height="316"></li>
+            <li><img src="assets/images/hero-thumb-pink-cake.png" alt="Pink celebration cake" width="339" height="316"></li>
+          </ul>
+        </div>
+
+        <div class="hero__media">
+          <img class="hero__img-main" src="assets/images/hero-cake.png" alt="Chocolate drip cake topped with fresh fruit on a gold cake stand" width="2000" height="2500" fetchpriority="high">
+          <img class="hero__img-small" src="assets/images/hero-cookies.png" alt="Plate of assorted cookies" width="1536" height="1024">
+        </div>
+      </div>
+
+      <!-- Paper-textured wave along the bottom edge of the hero.
+           The plain SVG underneath is a fallback for browsers that block CSS masks
+           when the page is opened straight from disk (file://). -->
+      <img class="hero__wave-fill" src="assets/icons/hero-wave.svg" alt="" width="2538" height="133">
+      <div class="hero__wave" aria-hidden="true"></div>
+    </section>
+
+    <!-- ============================== CAKES CAROUSEL ============================== -->
+    <section class="cakes" id="cakes" data-carousel>
+      <div class="container">
+        <h2 class="section-title">FROM OUR BAKERY TO YOUR DOOR</h2>
+        <p class="cakes__intro">Discover freshly baked cakes and delicious treats, made with love for every celebration.</p>
+      </div>
+
+      <!-- Endless slider: js/main.js loops the cards and adds swipe/drag.
+           The last card shows peeking in on the left, as in the design. -->
+      <div class="cakes__carousel">
+        <div class="carousel-viewport" data-carousel-viewport>
+          <div class="cakes__track" data-carousel-track>
+            <article class="cake-card">
+              <img src="assets/images/cake-chocolate-truffle.png" alt="Chocolate truffle cake" width="2000" height="2000" loading="lazy">
+              <h3>Chocolate Truffle Cake</h3>
+              <p>A rich and indulgent chocolate experience for true chocolate lovers.</p>
+            </article>
+
+            <article class="cake-card">
+              <img src="assets/images/cake-chocolate-delight.png" alt="Chocolate delight cake topped with cherries" width="2000" height="2392" loading="lazy">
+              <h3>Chocolate Delight Cake</h3>
+              <p>Rich chocolate layers topped with delicious cream and irresistible chocolate flavours.</p>
+            </article>
+
+            <article class="cake-card cake-card--compact">
+              <img class="cake-card__img--black-forest" src="assets/images/cake-black-forest.png" alt="Black forest cake with cream swirls and cherries" width="2000" height="2500" loading="lazy">
+              <h3>Black Forest Cake</h3>
+              <p>A classic favourite with soft chocolate layers, fresh cream, and juicy cherries.</p>
+            </article>
+
+            <article class="cake-card">
+              <img src="assets/images/cake-fresh-cream.png" alt="Fresh cream cake with chocolate decorations" width="2000" height="2500" loading="lazy">
+              <h3>Fresh Cream Cake</h3>
+              <p>Light, creamy, and delicious — perfect for birthdays and every celebration.</p>
+            </article>
+
+            <article class="cake-card">
+              <img src="assets/images/cake-strawberry-cream.png" alt="Red velvet cake with fresh cream and strawberries" width="2000" height="2500" loading="lazy">
+              <h3>Red Velvet Cake</h3>
+              <p>Soft red velvet layers with fresh cream and juicy strawberries.</p>
+            </article>
+          </div>
+        </div>
+
+        <button class="cakes__arrow cakes__arrow--prev" type="button" aria-label="Previous cakes" data-carousel-prev>
+          <img src="assets/icons/carousel-prev.svg" alt="" width="90" height="96">
+        </button>
+        <button class="cakes__arrow cakes__arrow--next" type="button" aria-label="Next cakes" data-carousel-next>
+          <img src="assets/icons/carousel-next.svg" alt="" width="90" height="96">
+        </button>
+      </div>
+
+      <div class="container">
+        <div class="progress" aria-hidden="true">
+          <span class="progress__bar" data-carousel-progress></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== OUR STORY ============================== -->
+    <section class="story" id="our-story">
+      <img class="story__deco" src="assets/images/deco-biscuits.png" alt="" width="850" height="549" loading="lazy">
+
+      <div class="container story__inner">
+        <div class="story__media">
+          <img class="story__img story__img--main" src="assets/images/story-dough.png" alt="Baker kneading dough on a floured table" width="1200" height="800" loading="lazy">
+          <div class="story__side">
+            <img class="story__img" src="assets/images/story-croissants.png" alt="Baker holding a tray of fresh croissants" width="800" height="605" loading="lazy">
+            <img class="story__img" src="assets/images/story-bread.png" alt="Bread rolls baking in the oven" width="600" height="611" loading="lazy">
+          </div>
+        </div>
+
+        <div class="story__content">
+          <p class="story__eyebrow">OUR STORY</p>
+          <h2 class="section-title">Freshly Baked, Everyday</h2>
+          <p class="story__text">At Gopal Bakery and Sweets, every creation is made with passion, quality ingredients, and a love for great taste. From freshly baked breads to delicious cakes and sweet treats, we bring happiness to every bite.</p>
+          <p class="story__text">Our bakers combine traditional recipes with fresh ingredients to create flavours your family will love and remember.</p>
+          <a class="text-link story__link" href="#">READ OUR STORY</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== COOKIE FEATURES ============================== -->
+    <section class="features" aria-label="Fresh cookies and treats">
+      <div class="container">
+        <div class="features__box">
+
+          <div class="feature feature--one">
+            <div class="feature__text">
+              <h2 class="feature__title">Fresh Cookies, Made to Perfection</h2>
+              <img class="feature__line" src="assets/icons/heading-line.svg" alt="" width="133" height="3">
+              <p>Enjoy delicious, freshly baked cookies made with quality ingredients and traditional recipes. Every bite is full of flavour and homemade goodness.</p>
+            </div>
+            <div class="photo-frame">
+              <span class="photo-frame__outline"></span>
+              <img class="photo-frame__img" src="assets/images/feature-cookie-tray.png" alt="Tray of cookie dough going into the oven" width="942" height="881" loading="lazy">
+            </div>
+          </div>
+
+          <div class="feature feature--two">
+            <div class="feature__text">
+              <h2 class="feature__title">Baked Fresh for Every Moment</h2>
+              <img class="feature__line" src="assets/icons/heading-line.svg" alt="" width="133" height="3">
+              <p>From colourful donuts and tasty biscuits to classic bakery favourites, we create sweet treats perfect for sharing, celebrating, and enjoying anytime.</p>
+            </div>
+            <div class="photo-frame">
+              <span class="photo-frame__outline"></span>
+              <img class="photo-frame__img" src="assets/images/feature-donuts.png" alt="Box of glazed donuts next to a wrapped donut" width="2000" height="2000" loading="lazy">
+            </div>
+          </div>
+
+          <img class="features__deco" src="assets/images/deco-biscuits.png" alt="" width="850" height="549" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== COOKIES ============================== -->
+    <section class="cookies" id="cookies">
+      <div class="container">
+        <h2 class="section-title">Cookies for Every Occasion</h2>
+
+        <div class="cookies__grid">
+          <article class="cookie-card">
+            <img class="cookie-card__img" src="assets/images/cookies-fresh.png" alt="Freshly baked chocolate chip cookies" width="1133" height="1604" loading="lazy">
+            <h3 class="cookie-card__title">Freshly Baked Cookies</h3>
+            <p class="cookie-card__text">Enjoy warm, delicious cookies baked fresh with premium ingredients and lots of love.</p>
+            <a class="text-link" href="shop.html#cookies">Explore Cookies →</a>
+          </article>
+
+          <article class="cookie-card">
+            <img class="cookie-card__img" src="assets/images/cookies-gift-box.png" alt="Assorted cookies packed in a gift box" width="3750" height="3750" loading="lazy">
+            <h3 class="cookie-card__title">Cookie Gift Boxes</h3>
+            <p class="cookie-card__text">Beautifully packed assorted cookies, perfect for gifting and sharing with your loved ones.</p>
+            <a class="text-link" href="shop.html#cookies">Shop Gift Boxes →</a>
+          </article>
+
+          <article class="cookie-card">
+            <img class="cookie-card__img" src="assets/images/cookies-custom.png" alt="Colourful decorated birthday cookies" width="4096" height="4096" loading="lazy">
+            <h3 class="cookie-card__title">Custom Cookies</h3>
+            <p class="cookie-card__text">Make every celebration sweeter with colourful, customised cookies for your special occasions.</p>
+            <a class="text-link" href="shop.html#cookies">Order Custom Cookies →</a>
+          </article>
+        </div>
+      </div>
+
+      <img class="cookies__deco" src="assets/images/deco-biscuits.png" alt="" width="850" height="549" loading="lazy">
+    </section>
+
+    <!-- ============================== PASTRY BANNER ============================== -->
+    <div class="banner">
+      <img src="assets/images/pastry-banner.png" alt="" width="1200" height="800" loading="lazy">
+    </div>
+
+    <!-- ============================== COMMUNITY ============================== -->
+    <section class="community" id="community">
+      <div class="container community__grid">
+        <div class="community__col">
+          <h2 class="section-title community__title">Community</h2>
+          <img class="community__img community__img--shop" src="assets/images/community-shop.png" alt="Smiling baker handing a customer a bakery bag" width="1536" height="1024" loading="lazy">
+        </div>
+
+        <div class="community__col">
+          <img class="community__img community__img--family" src="assets/images/community-family.png" alt="Family sharing pastries and drinks at the bakery" width="1536" height="1024" loading="lazy">
+          <div class="community__block community__block--moment">
+            <h3 class="community__heading">Made for Every Moment</h3>
+            <p>Whether you're catching up with friends or celebrating with family, our bakery is always a place to feel at home.</p>
+          </div>
+        </div>
+
+        <div class="community__col">
+          <div class="community__block community__block--place">
+            <h3 class="community__heading">A Place to Connect &amp; Share</h3>
+            <p>At Gopal Bakery and Sweets, we bring people together over fresh food, warm conversations, and sweet moments.</p>
+          </div>
+        </div>
+      </div>
+
+      <img class="community__deco" src="assets/images/deco-cookie-bowl.png" alt="" width="421" height="277" loading="lazy">
+    </section>
+
+    <!-- ============================== TESTIMONIALS ============================== -->
+    <!-- Endless slider, centred: the last review peeks in on the left, as in the design -->
+    <section class="testimonials" aria-label="What our customers say" data-carousel="center">
+      <div class="carousel-viewport" data-carousel-viewport>
+        <div class="testimonials__track" data-carousel-track>
+          <figure class="testimonial">
+            <img class="testimonial__quote" src="assets/icons/quote.svg" alt="" width="156" height="117">
+            <blockquote class="testimonial__text">
+              <p>“Gopal Bakery and Sweets made our celebration truly special and memorable! From the moment we placed our order, the experience was smooth and wonderful. The cake was beautifully designed, freshly prepared, and tasted absolutely amazing. Every layer was soft, delicious, and made with great attention to detail. Our family and guests couldn’t stop talking about how beautiful and flavourful it was.</p>
+            </blockquote>
+            <figcaption>
+              <span class="testimonial__name">Simran Kaur</span>
+              <img class="testimonial__stars" src="assets/icons/stars.svg" alt="Rated 5 out of 5" width="119" height="23">
+            </figcaption>
+          </figure>
+
+          <figure class="testimonial">
+            <img class="testimonial__quote" src="assets/icons/quote-side.svg" alt="" width="156" height="117">
+            <blockquote class="testimonial__text">
+              <p>Gopal Bakery and Sweets made our celebration truly special and memorable! From the moment we placed our order, the experience was smooth and wonderful. The cake was beautifully designed, freshly prepared, and tasted absolutely amazing. Every layer was soft, delicious, and made with great attention to detail. Our family and guests couldn’t stop talking about how beautiful and flavourful it was.</p>
+            </blockquote>
+            <figcaption>
+              <span class="testimonial__name">Lorem Ipsum</span>
+              <img class="testimonial__stars" src="assets/icons/stars.svg" alt="Rated 5 out of 5" width="119" height="23">
+            </figcaption>
+          </figure>
+
+          <figure class="testimonial">
+            <img class="testimonial__quote" src="assets/icons/quote-side.svg" alt="" width="156" height="117">
+            <blockquote class="testimonial__text">
+              <p>Gopal Bakery and Sweets made our celebration truly special and memorable! From the moment we placed our order, the experience was smooth and wonderful. The cake was beautifully designed, freshly prepared, and tasted absolutely amazing. Every layer was soft, delicious, and made with great attention to detail. Our family and guests couldn’t stop talking about how beautiful and flavourful it was.</p>
+            </blockquote>
+            <figcaption>
+              <span class="testimonial__name">Lorem Ipsum</span>
+              <img class="testimonial__stars" src="assets/icons/stars.svg" alt="Rated 5 out of 5" width="119" height="23">
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="testimonials__nav">
+        <button class="testimonials__btn testimonials__btn--prev" type="button" aria-label="Previous review" data-carousel-prev>
+          <img src="assets/icons/testimonial-prev.svg" alt="" width="93" height="77">
+        </button>
+        <button class="testimonials__btn" type="button" aria-label="Next review" data-carousel-next>
+          <img src="assets/icons/testimonial-next.svg" alt="" width="93" height="77">
+        </button>
+      </div>
+    </section>
+
+    <!-- ============================== CALL TO ACTION ============================== -->
+    <section class="cta" id="order">
+      <div class="container">
+        <div class="cta__box">
+          <div class="cta__text">
+            <h2 class="cta__title">Freshly Baked Happiness, Just a Click Away</h2>
+            <p>Order your favourite cakes, cookies, and delicious treats from Gopal Bakery and Sweets today.</p>
+          </div>
+          <a class="btn btn--solid btn--lg" href="shop.html">Order now</a>
+          <img class="cta__deco" src="assets/images/deco-biscuits.png" alt="" width="850" height="549" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================== FOOTER ============================== -->
+  <footer class="footer" id="contact">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a class="footer__logo" href="#top">
+          <img src="assets/images/logo.png" alt="Gopal Bakery and Sweets – home" width="665" height="300" loading="lazy">
+        </a>
+        <p class="footer__tagline">Freshly baked cakes, delicious treats, and sweet memories made with love for every occasion.</p>
+      </div>
+
+      <nav class="footer__col" aria-label="Company">
+        <h3 class="footer__heading">Company</h3>
+        <ul class="footer__links">
+          <li><a href="https://maps.google.com/?cid=627688802151096340" target="_blank" rel="noopener">Location</a></li>
+          <li><a href="#our-story">Our Story</a></li>
+          <li><a href="#community">Community</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer__col" aria-label="Quick links">
+        <h3 class="footer__heading">Quick Links</h3>
+        <ul class="footer__links">
+          <li><a href="shop.html">Menu</a></li>
+          <li><a href="#">Catering</a></li>
+          <li><a href="#">Wedding Cakes</a></li>
+          <li><a href="#">Gift Cards</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer__col" aria-label="Help">
+        <h3 class="footer__heading">Help</h3>
+        <ul class="footer__links">
+          <li><a href="#">FAQ</a></li>
+          <li><a href="tel:+919988340395">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__newsletter">
+        <p>Get special offers, new treats, and the latest updates from Gopal Bakery and Sweets.</p>
+        <!-- Live Google Map of the shop (embed code from Google Maps → Share → Embed a map) -->
+        <div class="footer__map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3425.5397061865137!2d75.6696327!3d30.8435613!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a7fd3b99ff1f1%3A0x8b5ffa3d1b4e014!2sNew%20Gopal%20Bakers!5e0!3m2!1sen!2sin!4v1789784450161!5m2!1sen!2sin" title="Map to our shop near Durga Mata Mandir, Old Grain Market, Mullanpur Dakha" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+
+    <p class="footer__copy">© 2026 Gopal Bakery and Sweets</p>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

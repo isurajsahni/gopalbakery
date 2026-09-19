@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shop – Gopal Bakery and Sweets</title>
+  <meta name="description" content="Order cakes, cookies, biscuits, pastries and breads from Gopal Bakery and Sweets. Add items to your cart and send your order on WhatsApp.">
+
+  <!-- Same fonts as the home page -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka+One&amp;family=Single+Day&amp;family=Sniglet&amp;display=swap">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/shop.css">
+</head>
+<body>
+
+  <!-- ============================== ANNOUNCEMENT BAR ============================== -->
+  <div class="announcement">
+    <p>🍰 Freshly Baked Goodness, Delivered to Your Doorstep</p>
+  </div>
+
+  <!-- ============================== HEADER ============================== -->
+  <header class="header">
+    <div class="container header__inner">
+      <a class="logo" href="index.html">
+        <img src="assets/images/logo.png" alt="Gopal Bakery and Sweets – home" width="665" height="300">
+      </a>
+
+      <!-- Mobile menu: the hidden checkbox opens/closes the menu with CSS only -->
+      <input class="menu-toggle" type="checkbox" id="menu-toggle" aria-label="Toggle menu">
+      <label class="menu-button" for="menu-toggle" aria-hidden="true"><span></span></label>
+
+      <div class="header__menu">
+        <nav class="nav" aria-label="Main">
+          <a href="index.html">Home</a>
+          <a href="index.html#our-story">About</a>
+          <a href="index.html#cakes">Cakes</a>
+          <a class="is-active" href="shop.html" aria-current="page">Bakery Items</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <div class="header__actions">
+          <a class="btn btn--outline" href="#products">Order now</a>
+          <a class="btn btn--solid" href="tel:+919988340395">
+            <img src="assets/icons/phone.svg" alt="" width="25" height="25">
+            <span>99883 40395</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============================== PAGE BANNER ============================== -->
+    <section class="page-hero">
+      <div class="container page-hero__inner">
+        <div class="page-hero__content">
+          <p class="eyebrow">
+            <span>Order Online</span>
+            <img src="assets/icons/eyebrow-line.svg" alt="" width="129" height="1">
+          </p>
+          <h1 class="page-hero__title">Our Shop</h1>
+          <p class="page-hero__text">Choose your favourite cakes, cookies and treats, then send your order to us on WhatsApp. We’ll confirm it and bake it fresh for you.</p>
+        </div>
+
+        <ol class="order-steps" aria-label="How ordering works">
+          <li>
+            <span class="order-steps__num" aria-hidden="true">1</span>
+            <div>
+              <h2>Pick your treats</h2>
+              <p>Add cakes, cookies and more to your cart.</p>
+            </div>
+          </li>
+          <li>
+            <span class="order-steps__num" aria-hidden="true">2</span>
+            <div>
+              <h2>Send on WhatsApp</h2>
+              <p>Your cart becomes a ready-made WhatsApp message.</p>
+            </div>
+          </li>
+          <li>
+            <span class="order-steps__num" aria-hidden="true">3</span>
+            <div>
+              <h2>We confirm &amp; bake</h2>
+              <p>We reply with the final price and pickup or delivery time.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <!-- Paper-textured wave (same as the home page) -->
+      <img class="hero__wave-fill" src="assets/icons/hero-wave.svg" alt="" width="2538" height="133">
+      <div class="hero__wave" aria-hidden="true"></div>
+    </section>
+
+    <!-- ============================== PRODUCTS ============================== -->
+    <section class="shop" id="products">
+      <div class="container">
+        <div class="shop__head">
+          <h2 class="section-title">Our Bakery Items</h2>
+          <!-- Filter buttons are created from SHOP_CATEGORIES in js/products.js -->
+          <div class="shop__filters" role="group" aria-label="Show products" data-filters></div>
+        </div>
+
+        <noscript>
+          <p class="shop__noscript">Please turn on JavaScript to use the shop, or call us on <a href="tel:+919988340395">99883 40395</a> to order.</p>
+        </noscript>
+
+        <!-- Product cards are created from SHOP_PRODUCTS in js/products.js -->
+        <div class="product-grid" data-product-grid></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================== CART ============================== -->
+  <button class="cart-button" type="button" data-cart-open hidden>
+    <svg class="cart-button__icon" viewBox="0 0 24 24" width="26" height="26" aria-hidden="true">
+      <path d="M3 4h2l2.4 10.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 1.9-1.5L21 8H6.2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="10" cy="20" r="1.6" fill="currentColor"/>
+      <circle cx="17" cy="20" r="1.6" fill="currentColor"/>
+    </svg>
+    <span>View cart</span>
+    <span class="cart-button__count" data-cart-count>0</span>
+    <span class="cart-button__total" data-cart-total>₹0</span>
+  </button>
+
+  <dialog class="cart" aria-labelledby="cart-title" data-cart>
+    <div class="cart__header">
+      <h2 class="cart__title" id="cart-title">Your Order</h2>
+      <button class="cart__close" type="button" aria-label="Close cart" data-cart-close>&times;</button>
+    </div>
+
+    <div class="cart__body">
+      <p class="cart__empty" data-cart-empty>Your cart is empty. Add some treats!</p>
+      <ul class="cart__items" data-cart-items></ul>
+
+      <div class="cart__total" data-cart-summary>
+        <span>Total</span>
+        <strong data-cart-total>₹0</strong>
+      </div>
+      <p class="cart__hint" data-cart-summary>Delivery charges (if any) are confirmed on WhatsApp.</p>
+
+      <form class="order-form" novalidate data-order-form>
+        <h3 class="order-form__title">Your details</h3>
+
+        <label class="field">
+          <span class="field__label">Your name</span>
+          <input class="field__input" type="text" name="name" autocomplete="name" required>
+        </label>
+
+        <fieldset class="field field--choice">
+          <legend class="field__label">Pickup or delivery?</legend>
+          <label class="choice"><input type="radio" name="type" value="Pickup from shop" checked> Pickup from shop</label>
+          <label class="choice"><input type="radio" name="type" value="Home delivery"> Home delivery</label>
+        </fieldset>
+
+        <label class="field" data-address-field hidden>
+          <span class="field__label">Delivery address</span>
+          <textarea class="field__input" name="address" rows="3" autocomplete="street-address"></textarea>
+        </label>
+
+        <label class="field">
+          <span class="field__label">Needed on <small>(optional)</small></span>
+          <input class="field__input" type="date" name="date">
+        </label>
+
+        <label class="field">
+          <span class="field__label">Note <small>(optional)</small></span>
+          <textarea class="field__input" name="note" rows="2" placeholder="Cake message, flavour, eggless…"></textarea>
+        </label>
+
+        <p class="order-form__error" role="alert" data-form-error></p>
+
+        <button class="btn-whatsapp" type="submit">Send order on WhatsApp</button>
+        <p class="order-form__sent" role="status" data-form-sent hidden>WhatsApp is open with your order – just press send. We’ll reply to confirm.</p>
+        <button class="cart__clear" type="button" data-cart-clear>Clear cart</button>
+      </form>
+    </div>
+  </dialog>
+
+  <!-- announces cart changes to screen readers -->
+  <p class="visually-hidden" aria-live="polite" data-cart-announce></p>
+
+  <!-- ============================== FOOTER ============================== -->
+  <footer class="footer" id="contact">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a class="footer__logo" href="index.html">
+          <img src="assets/images/logo.png" alt="Gopal Bakery and Sweets – home" width="665" height="300" loading="lazy">
+        </a>
+        <p class="footer__tagline">Freshly baked cakes, delicious treats, and sweet memories made with love for every occasion.</p>
+      </div>
+
+      <nav class="footer__col" aria-label="Company">
+        <h3 class="footer__heading">Company</h3>
+        <ul class="footer__links">
+          <li><a href="https://maps.google.com/?cid=627688802151096340" target="_blank" rel="noopener">Location</a></li>
+          <li><a href="index.html#our-story">Our Story</a></li>
+          <li><a href="index.html#community">Community</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer__col" aria-label="Quick links">
+        <h3 class="footer__heading">Quick Links</h3>
+        <ul class="footer__links">
+          <li><a href="#products">Menu</a></li>
+          <li><a href="#">Catering</a></li>
+          <li><a href="#">Wedding Cakes</a></li>
+          <li><a href="#">Gift Cards</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer__col" aria-label="Help">
+        <h3 class="footer__heading">Help</h3>
+        <ul class="footer__links">
+          <li><a href="#">FAQ</a></li>
+          <li><a href="tel:+919988340395">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__newsletter">
+        <p>Get special offers, new treats, and the latest updates from Gopal Bakery and Sweets.</p>
+        <div class="footer__map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3425.5397061865137!2d75.6696327!3d30.8435613!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a7fd3b99ff1f1%3A0x8b5ffa3d1b4e014!2sNew%20Gopal%20Bakers!5e0!3m2!1sen!2sin!4v1789784450161!5m2!1sen!2sin" title="Map to our shop near Durga Mata Mandir, Old Grain Market, Mullanpur Dakha" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+
+    <p class="footer__copy">© 2026 Gopal Bakery and Sweets</p>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/products.js" defer></script>
+  <script src="js/shop.js" defer></script>
+</body>
+</html>
